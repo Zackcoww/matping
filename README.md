@@ -9,7 +9,16 @@ One window instead of a stack of `ping -t` cmd windows.
 
 [Download](../../releases/latest) · [MIT License](LICENSE)
 
-<img src="docs/screenshot.png" alt="MatPing screenshot" width="520">
+<table>
+<tr>
+<td align="center"><b>Before</b><br>a stack of cmd windows</td>
+<td align="center"><b>After</b><br>one MatPing window</td>
+</tr>
+<tr>
+<td valign="top"><img src="docs/before.png" alt="Many cmd windows each running ping -t" width="300"></td>
+<td valign="top"><img src="docs/screenshot.png" alt="MatPing window with status bars" width="400"></td>
+</tr>
+</table>
 
 </div>
 
