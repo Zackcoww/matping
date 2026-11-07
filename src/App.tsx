@@ -10,7 +10,9 @@ type Line = { text: string; cls: "" | "fail" | "spike" };
 type Live = { lines: Line[]; bars: Line["cls"][]; times: number[]; ok?: boolean; ms?: number };
 type PingLine = { id: string; line: string; ok: boolean | null; ms: number | null };
 
-const average = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+const REPO = "https://github.com/Zackcoww/matping";
+
+const average =(xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 
 // Spike: more than double the recent average and at least 10 ms above it (needs a few samples first).
 const isSpike = (ms: number, times: number[]) => {
@@ -110,8 +112,11 @@ export default function App() {
     <>
       <header>
         <img src={logo} alt="MatPing!" className="logo" />
-        <button className="link" onClick={() => invoke("open_github")}>
-          GitHub
+        <button className="link" title="Open in browser" onClick={() => invoke("open_github")}>
+          {REPO}
+        </button>
+        <button className="icon" title="Copy link" aria-label="Copy link" onClick={() => navigator.clipboard.writeText(REPO)}>
+          ⧉
         </button>
         <button onClick={() => setForm({ id: crypto.randomUUID(), name: "", host: "" })}>+ Add</button>
       </header>

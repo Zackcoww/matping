@@ -30,7 +30,8 @@ button.danger { background: var(--fail); }
 
 header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .logo { height: 30px; }
-.link { background: none; color: var(--muted); margin-right: auto; text-decoration: underline; }
+.link { background: none; color: var(--muted); text-decoration: underline; user-select: text; padding: 5px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+header .icon { margin-right: auto; }
 .link:hover { color: var(--text); filter: none; }
 
 .form { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
