@@ -1,0 +1,82 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --card: #161b22;
+  --line: #262d36;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --up: #3fd47a;
+  --fail: #f04a4a;
+  --spike: #e3b341;
+  font: 13px/1.4 system-ui, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 8px; }
+
+button {
+  background: var(--line);
+  color: var(--text);
+  border: 0;
+  padding: 5px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.3); }
+button.danger { background: var(--fail); }
+:focus-visible { outline: 2px solid var(--up); outline-offset: 1px; }
+
+header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.logo { height: 30px; margin-right: auto; }
+
+.form { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.form input {
+  flex: 1 1 120px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 5px 8px;
+  font: inherit;
+}
+
+.empty { color: var(--muted); text-align: center; }
+
+/* 1 column in a thin strip, ~6 at fullscreen 1920px */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 6px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--up);
+  padding: 4px 6px;
+  min-width: 0;
+}
+.card.down { border-left-color: var(--fail); }
+
+.row { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.icon { background: none; padding: 2px 4px; color: var(--muted); }
+.name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 40px; max-width: 40%; }
+.ms { font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 42px; }
+.down .ms { color: var(--fail); }
+.avg { color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.card[draggable] { cursor: grab; }
+.card.dragging { opacity: 0.4; }
+
+/* newest bar on the right; older ones get clipped off the left when narrow */
+.bars { flex: 1; display: flex; justify-content: flex-end; gap: 2px; overflow: hidden; min-width: 30px; }
+.bars i { flex: none; width: 4px; height: 16px; background: var(--up); }
+.bars i.fail { background: var(--fail); }
+.bars i.spike { background: var(--spike); }
+
+pre {
+  margin: 4px 0 2px;
+  max-height: 5.4em; /* 4 lines */
+  overflow: auto;
+  font: 11px/1.35 Consolas, monospace;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+pre .fail { color: var(--fail); }
+pre .spike { color: var(--spike); }
