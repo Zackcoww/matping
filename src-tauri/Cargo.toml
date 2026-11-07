@@ -1,6 +1,6 @@
 [package]
 name = "matping"
-version = "0.1.0"
+version = "0.1.1"
 description = "MatPing - simple, lightweight ping monitor"
 authors = ["Achmad Zaky"]
 edition = "2024"

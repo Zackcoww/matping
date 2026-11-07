@@ -110,6 +110,9 @@ export default function App() {
     <>
       <header>
         <img src={logo} alt="MatPing!" className="logo" />
+        <button className="link" onClick={() => invoke("open_github")}>
+          GitHub
+        </button>
         <button onClick={() => setForm({ id: crypto.randomUUID(), name: "", host: "" })}>+ Add</button>
       </header>
 

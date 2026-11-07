@@ -99,6 +99,12 @@ fn stop_ping(pings: State<Pings>, id: String) {
     stop(&pings, &id);
 }
 
+/// Opens the project page in the default browser. The URL is fixed, so nothing the UI sends can reach the shell.
+#[tauri::command]
+fn open_github() {
+    let _ = Command::new("explorer").arg("https://github.com/Zackcoww/matping").spawn();
+}
+
 /// Put MatPing in a kill-on-close job, so Windows kills every ping.exe it started
 /// whenever MatPing exits, even on a crash or a forced "End task".
 #[cfg(windows)]
@@ -129,7 +135,7 @@ pub fn run() {
             None,
         ))
         .manage(Pings::default())
-        .invoke_handler(tauri::generate_handler![start_ping, stop_ping])
+        .invoke_handler(tauri::generate_handler![start_ping, stop_ping, open_github])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

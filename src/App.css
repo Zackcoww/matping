@@ -29,7 +29,9 @@ button.danger { background: var(--fail); }
 :focus-visible { outline: 2px solid var(--up); outline-offset: 1px; }
 
 header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.logo { height: 30px; margin-right: auto; }
+.logo { height: 30px; }
+.link { background: none; color: var(--muted); margin-right: auto; text-decoration: underline; }
+.link:hover { color: var(--text); filter: none; }
 
 .form { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .form input {
