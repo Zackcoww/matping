@@ -2,6 +2,7 @@
 
 A simple, lightweight ping monitor for Windows. One window instead of a stack of `ping -t` cmd windows.
 
+- very lightweight usage 300ms - 500ms cold start
 - Save a list of targets (name + IP or host); add, edit, delete, drag to reorder.
 - Every target pings non-stop in the background (Windows' own `ping.exe`, no admin needed).
 - Each card shows the latest and average latency and a status bar of the last 60 pings:
