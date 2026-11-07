@@ -4,7 +4,7 @@
 
 # MatPing
 
-**Simple, lightweight ping monitor for Windows.**<br>
+**Simple, lightweight ping monitor from local computer (Windows ofkors).**<br>
 One window instead of a stack of `ping -t` cmd windows.
 
 [Download](../../releases/latest) · [MIT License](LICENSE)
