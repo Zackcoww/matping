@@ -1,6 +1,15 @@
+<div align="center">
+
+<img src="src-tauri/icons/icon.png" alt="MatPing" width="128" height="128">
+
 # MatPing
 
-A simple, lightweight ping monitor for Windows. One window instead of a stack of `ping -t` cmd windows.
+**Simple, lightweight ping monitor for Windows.**<br>
+One window instead of a stack of `ping -t` cmd windows.
+
+[Download](../../releases/latest) · [MIT License](LICENSE)
+
+</div>
 
 - very lightweight usage 300ms - 500ms cold start
 - Save a list of targets (name + IP or host); add, edit, delete, drag to reorder.
