@@ -9,6 +9,8 @@ One window instead of a stack of `ping -t` cmd windows.
 
 [Download](../../releases/latest) · [MIT License](LICENSE)
 
+<img src="docs/screenshot.png" alt="MatPing screenshot" width="520">
+
 </div>
 
 - very lightweight usage 300ms - 500ms cold start
